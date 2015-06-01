@@ -1,0 +1,102 @@
+27bdffe8
+afbe0014
+03a0f021
+afc00008
+8fc20008
+00000000
+24420001
+afc20008
+8fc20008
+03c0e821
+8fbe0014
+27bd0018
+03e00008
+00000000
+00000000
+00000000
+	1 cycle 
+Instruction Fetch	(pc = 0x00000000) : 27bdffe8
+	2 cycle 
+Decode		(pc = 0x00000000) : 9, 1d, 1d, 1f, 1f, 28
+Instruction Fetch	(pc = 0x00000004) : afbe0014
+	3 cycle 
+Execute		(pc: 0x00000000) : 	 <addiu> R[29] = R[29] + SignExtImm(ffffffe8)	<result> R[29] = 0x000fffe8
+Decode		(pc = 0x00000004) : 2b, 1d, 1e, 0, 0, 14
+Instruction Fetch	(pc = 0x00000008) : 03a0f021
+	4 cycle 
+Memory_Access	(PC = 0x00000000) : ALUdata-1048552, Memory data-0, rd-31, rt-29 
+Execute		(pc: 0x00000004) : 	 <sw> M[R[29](0x000fffe8) + SignExtImm(14)] = R[30]	<result> M[ffffc] = 0x00000000
+Decode		(pc = 0x00000008) : 0, 1d, 0, 1e, 0, 21
+Instruction Fetch	(pc = 0x0000000c) : afc00008
+	5 cycle 
+Write_back	(pc = 0x00000000) : ALUdata-1048552, Memorydata-0, rd-31, rt-29 
+Memory_Access	(PC = 0x00000004) : ALUdata-0, Memory data-0, rd-0, rt-30 
+Execute		(pc: 0x00000008) : 	 <addu> R[30] = R[29] + R[0]	<result> R[30] = 0x000fffe8
+Decode		(pc = 0x0000000c) : 2b, 1e, 0, 0, 0, 8
+Instruction Fetch	(pc = 0x00000010) : 8fc20008
+	6 cycle 
+Write_back	(pc = 0x00000004) : ALUdata-0, Memorydata-0, rd-0, rt-30 
+Memory_Access	(PC = 0x00000008) : ALUdata-1048552, Memory data-0, rd-30, rt-0 
+Execute		(pc: 0x0000000c) : 	 <sw> M[R[30](0x000fffe8) + SignExtImm(8)] = R[0]	<result> M[ffff0] = 0x00000000
+Decode		(pc = 0x00000010) : 23, 1e, 2, 0, 0, 8
+Instruction Fetch	(pc = 0x00000014) : 00000000
+	7 cycle 
+Write_back	(pc = 0x00000008) : ALUdata-1048552, Memorydata-0, rd-30, rt-0 
+Memory_Access	(PC = 0x0000000c) : ALUdata-0, Memory data-0, rd-0, rt-0 
+Execute		(pc: 0x00000010) : 	 <lw> R[2] = M[R[30]+SignExtImm(8)]
+Instruction Fetch	(pc = 0x00000018) : 24420001
+	8 cycle 
+Write_back	(pc = 0x0000000c) : ALUdata-0, Memorydata-0, rd-0, rt-0 
+Memory_Access	(PC = 0x00000010) : ALUdata-0, Memory data-0, rd-0, rt-2 
+<pre-inst result> R[2] = 0x00000000
+Decode		(pc = 0x00000018) : 9, 2, 2, 0, 0, 1
+Instruction Fetch	(pc = 0x0000001c) : afc20008
+	9 cycle 
+Write_back	(pc = 0x00000010) : ALUdata-0, Memorydata-0, rd-0, rt-2 
+Execute		(pc: 0x00000018) : 	 <addiu> R[2] = R[2] + SignExtImm(1)	<result> R[2] = 0x00000001
+Decode		(pc = 0x0000001c) : 2b, 1e, 2, 0, 0, 8
+Instruction Fetch	(pc = 0x00000020) : 8fc20008
+	10 cycle 
+Memory_Access	(PC = 0x00000018) : ALUdata-1, Memory data-0, rd-0, rt-2 
+Execute		(pc: 0x0000001c) : 	 <sw> M[R[30](0x000fffe8) + SignExtImm(8)] = R[2]	<result> M[ffff0] = 0x00000001
+Decode		(pc = 0x00000020) : 23, 1e, 2, 0, 0, 8
+Instruction Fetch	(pc = 0x00000024) : 03c0e821
+	11 cycle 
+Write_back	(pc = 0x00000018) : ALUdata-1, Memorydata-0, rd-0, rt-2 
+Memory_Access	(PC = 0x0000001c) : ALUdata-1, Memory data-1, rd-0, rt-2 
+Execute		(pc: 0x00000020) : 	 <lw> R[2] = M[R[30]+SignExtImm(8)]
+Decode		(pc = 0x00000024) : 0, 1e, 0, 1d, 0, 21
+Instruction Fetch	(pc = 0x00000028) : 8fbe0014
+	12 cycle 
+Write_back	(pc = 0x0000001c) : ALUdata-1, Memorydata-1, rd-0, rt-2 
+Memory_Access	(PC = 0x00000020) : ALUdata-1, Memory data-1, rd-0, rt-2 
+<pre-inst result> R[2] = 0x00000001
+Execute		(pc: 0x00000024) : 	 <addu> R[29] = R[30] + R[0]	<result> R[29] = 0x000fffe8
+Decode		(pc = 0x00000028) : 23, 1d, 1e, 0, 0, 14
+Instruction Fetch	(pc = 0x0000002c) : 27bd0018
+	13 cycle 
+Write_back	(pc = 0x00000020) : ALUdata-1, Memorydata-1, rd-0, rt-2 
+Memory_Access	(PC = 0x00000024) : ALUdata-1048552, Memory data-0, rd-29, rt-0 
+Execute		(pc: 0x00000028) : 	 <lw> R[30] = M[R[29]+SignExtImm(14)]
+Decode		(pc = 0x0000002c) : 9, 1d, 1d, 0, 0, 18
+Instruction Fetch	(pc = 0x00000030) : 03e00008
+	14 cycle 
+Write_back	(pc = 0x00000024) : ALUdata-1048552, Memorydata-0, rd-29, rt-0 
+Memory_Access	(PC = 0x00000028) : ALUdata-0, Memory data-0, rd-0, rt-30 
+<pre-inst result> R[30] = 0x00000000
+Execute		(pc: 0x0000002c) : 	 <addiu> R[29] = R[29] + SignExtImm(18)	<result> R[29] = 0x00100000
+Decode		(pc = 0x00000030) : 0, 1f, 0, 0, 0, 8
+Instruction Fetch	(pc = 0xfffffffb) : 00000000
+	15 cycle 
+Write_back	(pc = 0x00000028) : ALUdata-0, Memorydata-0, rd-0, rt-30 
+Memory_Access	(PC = 0x0000002c) : ALUdata-1048576, Memory data-0, rd-0, rt-29 
+Execute		(pc: 0x00000030) : 	 <jr> pc = R[31]	<result> pc = 0xffffffff
+Instruction Fetch	(pc = 0xfffffffb) : 00000000
+	16 cycle 
+Write_back	(pc = 0x0000002c) : ALUdata-1048576, Memorydata-0, rd-0, rt-29 
+Memory_Access	(PC = 0x00000030) : ALUdata--1, Memory data-0, rd-0, rt-0 
+Instruction Fetch	(pc = 0xfffffffb) : 00000000
+	17 cycle 
+Write_back	(pc = 0x00000030) : ALUdata--1, Memorydata-0, rd-0, rt-0 
+Instruction Fetch	(pc = 0xfffffffb) : 00000000
+result : 1
